@@ -12,7 +12,7 @@ size=1028 and alpha=0.015:
     nil
     how2pls> (def h (histogram))
     #'how2pls/h
-    how2pls> (doseq [n (range 10)] (update h n))
+    how2pls> (doseq [n (range 10)] (update! h n))
     nil
     how2pls> (median h)
     4.5

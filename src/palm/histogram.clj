@@ -8,7 +8,7 @@
   ([] (histogram (exponentially-decaying-reservoir)))
   ([reservoir] (Histogram. reservoir)))
 
-(defn update
+(defn update!
   [^Histogram h ^long v]
   (.update h v)
   h)
