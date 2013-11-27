@@ -34,3 +34,26 @@ If you want to specify size and alpha for the reservoir:
     how2pls> (def h-custom (histogram r))
     #'how2pls/h-custom
 ````
+
+Counters are included too:
+````
+    how2pls> (require '[palm.counter :as c])
+    nil
+    how2pls> (def cnt (c/counter))
+    #'how2pls/cnt
+    how2pls> cnt
+    #<Counter com.codahale.metrics.Counter@418ff373>
+    how2pls> (c/value cnt)
+    0
+    how2pls> (c/inc! cnt)
+    #<Counter com.codahale.metrics.Counter@418ff373>
+    how2pls> (c/inc! cnt)
+    #<Counter com.codahale.metrics.Counter@418ff373>
+    how2pls> (c/value cnt)
+    2
+    how2pls> (c/dec! cnt)
+    #<Counter com.codahale.metrics.Counter@418ff373>
+    how2pls> (c/value cnt)
+    1
+    how2pls>
+````
