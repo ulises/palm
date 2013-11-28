@@ -57,3 +57,19 @@ Counters are included too:
     1
     how2pls>
 ````
+
+and gauges as well:
+
+````
+    how2pls> (require '[palm.gauge :as g])
+    nil
+    how2pls> (def ga (g/gauge rand))
+    #'how2pls/ga
+    how2pls> (g/value ga)
+    0.13707259327461085
+    how2pls> (g/value ga)
+    0.43762169261290373
+    how2pls> (g/value ga)
+    0.8287572825813778
+    how2pls>
+````
