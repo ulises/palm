@@ -2,7 +2,8 @@
   (:require
    [palm.reservoir :refer [exponentially-decaying-reservoir]]
    [palm.snapshot :as snapshot])
-  (:import (com.codahale.metrics Histogram)))
+  (:import (com.codahale.metrics Histogram))
+  (:refer-clojure :exclude [count]))
 
 (defn histogram
   ([] (histogram (exponentially-decaying-reservoir)))
