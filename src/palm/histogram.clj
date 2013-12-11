@@ -22,6 +22,11 @@
   [^Histogram h]
   (.getSnapshot h))
 
+(defn mean
+  [^Histogram h]
+  (let [s (snapshot h)]
+    (snapshot/mean s)))
+
 (defn median
   [^Histogram h]
   (let [s (snapshot h)]
