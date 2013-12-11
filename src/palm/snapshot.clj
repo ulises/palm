@@ -5,6 +5,10 @@
   [^Snapshot s ^double quantile]
   (.getValue s quantile))
 
+(defn mean
+  [^Snapshot s]
+  (.getMean s))
+
 (defn median
   [^Snapshot s]
   (.getMedian s))
