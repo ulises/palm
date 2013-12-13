@@ -2,6 +2,8 @@
 
 A thin wrapper around codahale's excellent metrics.
 
+[![Build Status](https://travis-ci.org/ulises/palm.png?branch=master)](https://travis-ci.org/ulises/palm)
+
 ## Usage
 
 A simple histogram, using an exponentially decaying reservoir with
