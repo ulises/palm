@@ -12,3 +12,7 @@
 (defn median
   [^Snapshot s]
   (.getMedian s))
+
+(defn stdev
+  [^Snapshot s]
+  (.getStdDev s))

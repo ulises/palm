@@ -36,3 +36,8 @@
   [^Histogram h q]
   (let [s (snapshot h)]
     (snapshot/value s q)))
+
+(defn stdev
+  [^Histogram h]
+  (let [s (snapshot h)]
+    (snapshot/stdev s)))
