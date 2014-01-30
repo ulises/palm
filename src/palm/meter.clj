@@ -10,7 +10,7 @@
   ([^Meter meter ^long n] (do (.mark meter n) meter)))
 
 ;; total number of events
-(defn count [^Meter meter] (.getCount meter))
+(defn value [^Meter meter] (.getCount meter))
 
 ;; rates
 (defn mean-rate [^Meter m] (.getMeanRate m))
