@@ -1,4 +1,4 @@
-(defproject palm "0.1.3-SNAPSHOT"
+(defproject palm "0.1.4-SNAPSHOT"
   :description "A thin wrapper around codahale's metrics."
 
   :dependencies [[org.clojure/clojure "1.5.1"]
