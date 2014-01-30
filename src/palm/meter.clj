@@ -5,7 +5,7 @@
   (Meter.))
 
 ;; updating the meter
-(defn mark
+(defn mark!
   ([^Meter meter] (do (.mark meter) meter))
   ([^Meter meter ^long n] (do (.mark meter n) meter)))
 
