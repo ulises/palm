@@ -75,3 +75,23 @@ and gauges as well:
     0.8287572825813778
     how2pls>
 ````
+
+and now with meters:
+````
+    how2pls> (require '[palm.meter :refer [meter mark! get-1m-rate get-5m-rate get-15m-rate]])
+    nil
+    how2pls> (def m (meter))
+    #'how2pls/h
+    how2pls> (doseq [n (range 10)] (mark! m n))
+    nil
+    how2pls> ((juxt get-1m-rate get-5m-rate get-15m-rate) m)
+    [5.022316311930425 8.008935938892213 8.656718186459019]
+
+    ;; clock ticks a bit here
+
+    how2pls> ((juxt get-1m-rate get-5m-rate get-15m-rate) m)
+    [1.4389177147172463 6.237365580777972 7.964565216471703]
+    how2pls> ((juxt get-1m-rate get-5m-rate get-15m-rate) m)
+    [0.9485930210567798 5.738653364595958 7.746371787825518]
+
+````
